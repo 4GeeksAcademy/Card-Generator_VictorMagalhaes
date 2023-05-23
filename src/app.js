@@ -4,10 +4,15 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-
-/*window.onload = function() {
+/*
+window.onload = function() {
   //write your code here
-  /*let nipes = ["<i class="fa-solid fa-heart">", "<i class="fa-solid fa-spade">", "<i class="fa-solid fa-diamond">", "<i class="fa-solid fa-club">"];
+  let nipes = [
+    "fa-solid fa-heart",
+    "fa-solid fa-spade",
+    "fa-solid fa-diamond",
+    "fa-solid fa-club"
+  ];
   let faces = [
     "A",
     "2",
@@ -24,9 +29,18 @@ import "./assets/img/4geeks.ico";
     "K"
   ];
 
-  let nipe = nipes[Math.floor(Math.random() * 4)];
+  let nipeIndex = nipes[Math.floor(Math.random() * 4)];
+  let nipe = nipes[nipeIndex];
   let face = faces[Math.floor(Math.random() * faces.length)];
-  document.write(nipe + face);
+
+  document.getElementById(
+    "nipeContainer"
+  ).innerHTML = `<i class="fas ${nipe}"></i>`;
+  document.getElementById("faceContainer").innerHTML = face;
+  document.getElementById(
+    "bottomNipeContainer"
+  ).innerHTML = `<i class="fas ${nipe}"></i>`;
 };*/
-document.getElementById;
-let card = (nipe, face);
+x = document.getElementById("myDIV");
+x.querySelector(".random").style.background = "green";
+x.querySelector("h3,h2").style.background = "blue";

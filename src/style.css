@@ -29,7 +29,7 @@
 }
 
 .sticky-bottom {
-  align-self: end;
+  realign-self: end;
   transform: rotate(180deg);
   padding-bottom: 0px;
 }
