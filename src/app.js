@@ -1,17 +1,15 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
+import { Button } from "bootstrap";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-/*
 window.onload = function() {
   //write your code here
   let nipes = [
-    "fa-solid fa-heart",
-    "fa-solid fa-spade",
-    "fa-solid fa-diamond",
-    "fa-solid fa-club"
+    '<i style="color: red;">♥</i>',
+    "<i>♠</i>",
+    '<i style="color: red;">♦</i>',
+    "<i>♣</i>"
   ];
   let faces = [
     "A",
@@ -29,18 +27,24 @@ window.onload = function() {
     "K"
   ];
 
-  let nipeIndex = nipes[Math.floor(Math.random() * 4)];
+  let nipeIndex = Math.floor(Math.random() * 4);
   let nipe = nipes[nipeIndex];
   let face = faces[Math.floor(Math.random() * faces.length)];
 
-  document.getElementById(
-    "nipeContainer"
-  ).innerHTML = `<i class="fas ${nipe}"></i>`;
-  document.getElementById("faceContainer").innerHTML = face;
-  document.getElementById(
-    "bottomNipeContainer"
-  ).innerHTML = `<i class="fas ${nipe}"></i>`;
-};*/
-x = document.getElementById("myDIV");
-x.querySelector(".random").style.background = "green";
-x.querySelector("h3,h2").style.background = "blue";
+  document.getElementById("nipeIcon").innerHTML = nipe;
+  document.getElementById("bottomNipeIcon").innerHTML = nipe;
+
+  document.getElementById("face").innerHTML = face;
+
+  setTimeout(() => {
+    document.location.reload();
+  }, 10000);
+
+  let createCard = get.getElementById("createCard");
+  createCard.addEventListener("click", valuesCard);
+
+  let valuesCard = () => {
+    let width = document.getElementById("widthImput").value;
+    let heigth = document.getElementById("heigthImput").value;
+  };
+};
