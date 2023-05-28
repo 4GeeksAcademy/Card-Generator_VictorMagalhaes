@@ -36,15 +36,21 @@ window.onload = function() {
 
   document.getElementById("face").innerHTML = face;
 
-  setTimeout(() => {
+  /*setTimeout(() => {
     document.location.reload();
-  }, 10000);
+  }, 10000);*/
 
-  let createCard = get.getElementById("createCard");
-  createCard.addEventListener("click", valuesCard);
+  let createCard = document.getElementById("createCard");
+  createCard.addEventListener("click", changeCardSize);
 
-  let valuesCard = () => {
-    let width = document.getElementById("widthImput").value;
-    let heigth = document.getElementById("heigthImput").value;
-  };
+  function changeCardSize() {
+    // Recupera os valores dos inputs de texto
+    let widthInput = document.getElementById("widthInput").value;
+    let heightInput = document.getElementById("heightInput").value;
+
+    // Cria um novo elemento de cartão com as dimensões especificadas
+    let newCard = document.getElementById("newCard");
+    newCard.style.width = widthInput + "px";
+    newCard.style.height = heightInput + "px";
+  }
 };
